@@ -1,0 +1,35 @@
+body {
+    font-family: 'Rubik', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 0 15%;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: bold;
+    width: 30%;
+}
+
+ul {
+    display: flex;
+}
+
+li {
+    margin-right: 60px;
+    font-family: 'Archivo', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.myWork {
+    margin-right: 0;
+}
