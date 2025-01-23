@@ -1,15 +1,21 @@
+/* Body */
+
 body {
     font-family: 'Archivo', sans-serif;
     color: #1D1616;
     margin: 0 auto;
-    background-color: #EEEEEE;
+    background-color: #EEE;
 }
+
+/* Font */
 
 h1, 
 h2,
 h3 {
     font-family: "Rubik", sans-serif;
 }
+
+/* Header */
 
 header {
     display: flex;
@@ -20,10 +26,8 @@ header {
 }
 
 .logo {
-    font-size: 2rem;
-    font-weight: bold;
-    width: 30%;
-    color: #1D1616;
+    width: 15%;
+    margin-top: 12px;
 }
 
 ul {
@@ -48,20 +52,15 @@ a {
 
 .backgroundImage {
     width: 100%;
-    height: 800px;
+    height: 350px;
     background-image: url("../img/_DSF3262-edited.jpg");
     background-size: cover;
-    background-position: right;
+    background-position: bottom;
     background-repeat: no-repeat;
-    text-align: center;
-    
-}
-
-.heading {
-    color: #FFF;
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-weight: bold;
     padding: 500px 0 0 700px;
+    color: #FFF;
 }
 
 .activePage {
@@ -80,9 +79,16 @@ a {
     object-fit: contain;
 }
 
-img {
+.photos img {
     width: 32.5%;
     margin: 0 0 10px 10px;
+    transition: transform 0.5s 
+}
+
+.photos img:hover {
+    transform: scale(1.01);
+    opacity: .9;
+    cursor: pointer;
 }
 
 .about {
@@ -116,7 +122,7 @@ h1 {
 }
 
 .aboutButton,
-.scrollButton {
+.skillsButton {
     background-color: #D84040;
     color: #EEEEEE;
     font-size: 1rem;
@@ -124,6 +130,9 @@ h1 {
     border: none;
     border-radius: 3px;
 }
+
+
+/* Skills section  */
 
 .skills {
     background-color: #fff;
@@ -137,7 +146,7 @@ h1 {
     padding: 80px 0 40px 0;
 }
 
-.howPictures {
+.skillsPicture {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -145,12 +154,12 @@ h1 {
     margin: 0 auto;
     width: 80%;
     height: 700px;
-    background-image: url("../img/_DSF6557-edited.jpg");
+    background-image: url("../img/_DSF6636-edited-2.jpg");
     background-size: cover; 
     position: relative;   
 }
 
-.howPictures::before {
+.skillsPicture::before {
     content: "";
     position: absolute;
     top: 0;
@@ -159,9 +168,9 @@ h1 {
     background-color: rgba(0, 0, 0, .5);
 }
 
-.howPictures button,
-.howPictures h2, 
-.howPictures p {
+.skillsPicture button,
+.skillsPicture h2, 
+.skillsPicture p {
     position: relative;
 }
 
@@ -199,7 +208,7 @@ h1 {
     margin-bottom: 25px;
 }
 
-.scrollButton {
+.skillsButton {
     margin-top: 110px;
 }
 
@@ -235,14 +244,57 @@ h1 {
     font-size: .9rem;
 }
 
-.blog {
-    background-color: #FFF;
-    padding-top: 80px;
-}
+/* Blog Gallery */
 
-.blogs {
+.blogGallery {
+    width: 100%;
     display: flex;
+    overflow-x: scroll;
 }
 
+.blogGallery div {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+    flex: none;
+}
 
+.blogGallery div img {
+    width: 90%;
+    filter: grayscale(20%);
+    transition: transform 0.5s ;
+}
+
+.blogGallery::-webkit-scrollbar {
+    display: none;
+}
+
+#backButton,
+#nextButton {
+    width: 50px;
+    cursor: pointer;
+}
+
+#backButton {
+    margin: 0 40px 0 10%;
+}
+
+#nextButton {
+    margin: 0 10% 0 0;
+}
+
+.blogGalleryWrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10% auto;
+    background-color: #FFF;
+}
+
+.blogGallery div img:hover {
+    filter: grayscale(0);
+    cursor: pointer;
+    transform: scale(1.02);
+}
 

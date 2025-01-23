@@ -16,7 +16,7 @@
 <body>
     <main>
         <header>
-            <h2 class="logo">SOCIAL BUFFINGTON</h2>
+            <img class="logo" src="img/logo.png" alt="logo"></img>
             <nav class="links">
                 <ul>
                     <li><a class="activePage" href="index.html">HOME</a></li>
@@ -49,23 +49,23 @@
         </section>
         
     </section>
-   
+
 
     <section class="skills">
         <h2 class="how">How can I help your brand grow?</h2>
-        <div class="howPictures">
-            <button class="leftScroll"><</button>
+        <div class="skillsPicture" id="skillsBackground">
+            <button class="leftScroll" id="leftScroll"><</button>
             <div class="scrollText">
-                <h2 class="scrollH2">Event Marketing</h2>
+                <h2 class="scrollH2">Creative Storytelling</h2>
                 <p class="scrollP">Campaigns that engage and amplify brand stories</p>
-                <button class="scrollButton btn">View My Work</button>
+                <button class="skillsButton btn">View My Work</button>
             </div>
             
-            <button class="rightScroll">></button>
+            <button class="rightScroll" id="rightScroll">></button>
         </div>
     </section>
 
-   <section>
+    <section>
         <h2 class="testimonialsHeader">Testimonials</h2>
         <section class="testimonials">
             <div class="first">
@@ -75,7 +75,7 @@
                     to create thoughtful and clever campaigns that are on-brand, resonate with our audience, generate positive engagement 
                     and deliver a solid ROI. Her ability to listen and ask key questions make her a great collaborator and solid team player.”
                 </p>
-                <span>- Greg Lutchko</span>
+                <span><a href="https://www.linkedin.com/in/greg-lutchko-77605b8?trk=public_profile_recommendations">- Greg Lutchko</a></span>
             </div>
             <div class="second">
                 <img src="img/storks.png" alt="" class="testImage">
@@ -89,37 +89,32 @@
                     the vision, the passion, and loyalty that makes her a key element for her team's success! PS- Her culinary talent is an 
                     exquisite added bonus!" 
                 </p>
-                <span>- Annie Humphrey</span>
+                <span><a href="https://www.linkedin.com/in/annie-tang-humphrey-32a7349/">- Annie Humphrey</a></span>
             </div>
         </section>
         
-   </section>
-
-   <section class="blog">
-    <h2>Blog Posts</h2>
-    <section class="blogs">
-        <div class="firstPost">
-            <img src="img/Coldwell+Banker.png" alt="">
-            <p></p>
-        </div>
-        <div class="SecondPost">
-            <img src="img/Coldwell+Banker-2.png" alt="">
-            <img src="img/" alt="">
-            <p></p>
-        </div>
-        <div class="ThirdPost">
-            <img src="img/Coldwell+Banker-3.png" alt="">
-            <p></p>
-        </div>
-        <div class="FourthPost">
-            <img src="img/Coldwell+Banker-5.png" alt="">
-            <p></p>
-        </div>
     </section>
-    
-   </section>
+
+    <section class="blogGalleryWrap">
+        <img src="img/left.png" alt="" id="backButton">
+        <section class="blogGallery">
+            <div>
+                <span><img src="img/Coldwell+Banker.png" alt=""></span>
+                <span><img src="img/Coldwell+Banker-2.png" alt=""></span>
+                <span><img src="img/Coldwell+Banker-3.png" alt=""></span>
+            </div>
+            <div>
+                <span><img src="img/Coldwell+Banker-5.png" alt=""></span>
+            </div>
+        </section>
+        <img src="img/right.png" alt="" id="nextButton">
+    </section>
+
 
     
-    
+    </section>
+
+ 
+    <script src="js/app.js"></script>
 </body>
 </html>
