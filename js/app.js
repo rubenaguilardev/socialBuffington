@@ -9,7 +9,7 @@ let skillsRightScroll = document.getElementById("rightScroll");
 console.log(skillsRightScroll)
 
 skillsRightScroll.addEventListener('click', function() {
-    changeImage.style.backgroundImage = "url('img/_DSF3262-edited.jpg')";
+    changeImage.style.backgroundImage = "url('img/skills1.jpg')";
     changeSkillsH2.innerText = "Photography"
     changeSkillsP.innerText = "Capturing moments with artistic flair and emotional resonance";
     changeSkillsButton.innerText = "View My Photography"
