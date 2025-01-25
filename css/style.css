@@ -262,10 +262,18 @@ h1 {
     align-items: center;
 }
 
-.workH2 {
+.igLogo {
     text-align: center;
-    font-size: 2rem;
-    margin: 80px 0 80px;
+    margin: 80px auto;
+}
+
+.igIcon {
+    width: 3.5%;
+    margin-right: 10px;
+}
+
+.igText {
+    width: 11%;
 }
 
 .instagram {
@@ -309,12 +317,12 @@ h1 {
 }
 
 .prevBtn {
-    margin: 0 28px 0 2%;
+    margin: -100px 28px 0 2%;
     cursor: pointer;
 }
 
 .nextBtn {
-    margin: 0 2% 0 28px;
+    margin: -100px 2% 0 28px;
     cursor: pointer;
 }
 .prevBtn, 
@@ -363,6 +371,12 @@ h1 {
     margin-bottom: 80px;
     margin-left: 10%;
 
+}
+
+.fbLogo {
+    width: 18%;
+    display: block;
+    margin: 0 auto 80px auto;
 }
 
 .facebookPost h2 {
