@@ -36,11 +36,10 @@ ul {
 
 li {
     margin-right: 25px;
-    font-family: 'Archivo', sans-serif;
     font-size: .8rem;
 }
 
-a {
+.headerA {
     text-decoration: none;
     color: black;
     padding: 10px;
@@ -52,15 +51,17 @@ a {
 
 .backgroundImage {
     width: 100%;
-    height: 300px;
+    height: 800px;
     background-image: url("../img/skills0.jpg");
     background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
     font-size: 2rem;
     font-weight: bold;
-    padding: 500px 0 0 700px;
     color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .activePage {
@@ -112,8 +113,13 @@ h1 {
 
 .aboutParagraph {
     width: 85%;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     line-height: 1.5;
+}
+
+.connectIcon {
+    width: 6%;
+    margin-right: 15px;
 }
 
 .profilePhoto {
@@ -123,7 +129,7 @@ h1 {
 
 .aboutButton,
 .skillsButton {
-    background-color: #D84040;
+    background-color: #8E1616;
     color: #EEEEEE;
     font-size: 1rem;
     padding: 15px;
@@ -238,57 +244,169 @@ h1 {
     font-size: .9rem;
 }
 
-/* Blog Gallery */
 
-.blogGallery {
+/* Work Page */
+
+.workBackgroundImage {
     width: 100%;
+    height: 700px;
+    background-image: url("../img/workcover.png");
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #FFF;
     display: flex;
-    overflow-x: scroll;
+    justify-content: center;
+    align-items: center;
 }
 
-.blogGallery div {
+.workH2 {
+    text-align: center;
+    font-size: 2rem;
+    margin: 80px 0 80px;
+}
+
+.instagram {
+    display: flex;
+    justify-content: space-between;
     width: 100%;
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 10px;
-    flex: none;
+    margin-bottom: 80px;
 }
 
-.blogGallery div img {
-    width: 90%;
-    filter: grayscale(20%);
-    transition: transform 0.5s ;
+.instagramLeft {
+    margin-left: 10%;
+    width: 35%;
 }
 
-.blogGallery::-webkit-scrollbar {
+.instagramRight {
+    width: 35%;
+    margin-right: 10%;
+   
+}
+
+.instagramPhoto {
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.instagramP {
+    width: 100%;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+
+.instagramPost {
+    height: auto;
+}
+
+.carouselView {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.prevBtn {
+    margin: 0 28px 0 2%;
+    cursor: pointer;
+}
+
+.nextBtn {
+    margin: 0 2% 0 28px;
+    cursor: pointer;
+}
+.prevBtn, 
+.nextBtn {
+    background-color: transparent;
+    color: #1D1616;
+    font-size: 2rem;
+    border: 2px solid #1D1616;
+    border-radius: 50%;
+    padding: 4px 15px 10px 15px;
+    align-self: center;
+}
+    
+
+.itemList {
+    max-width: 100%;
+    width: 100vw;
+    gap: 20px;
+    display: flex;
+    scroll-behavior: smooth;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    height: 1060px;
+}
+
+.itemList::-webkit-scrollbar {
     display: none;
 }
 
-#backButton,
-#nextButton {
-    width: 50px;
-    cursor: pointer;
-}
-
-#backButton {
-    margin: 0 40px 0 10%;
-}
-
-#nextButton {
-    margin: 0 10% 0 0;
-}
-
-.blogGalleryWrap {
+.instagram-media {
+    height: 89%;
+    flex: 0 0 32%;
+    scroll-snap-align: center;
     display: flex;
-    align-items: center;
     justify-content: center;
-    margin: 10% auto;
-    background-color: #FFF;
+    align-items: center;
 }
 
-.blogGallery div img:hover {
-    filter: grayscale(0);
-    cursor: pointer;
-    transform: scale(1.02);
+/* Facebook Section */
+
+.facebookPost {
+    width: 80%;
+    text-align: center;
+    margin-bottom: 80px;
+    margin-left: 10%;
+
+}
+
+.facebookPost h2 {
+    font-size: 2rem;
+    margin-bottom: 80px;
+}
+
+iframe {
+    width: 31.5%;
+    height: 520px;
+    margin-right: 20px;
+}
+
+.fbPostRight {
+    margin-right: 0;
+}
+
+
+/* Footer */
+
+footer {
+    width: 100%;
+    height: 150px;
+    background-color: #1D1616;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #FFF;
+    
+}
+
+
+
+.footerLeft {
+    margin-left: 10%;
+    line-height: 1.5;
+}
+
+.footerRight {
+    margin-right: 10%;
+}
+
+.footerSpan {
+    display: block;
+
 }
 
