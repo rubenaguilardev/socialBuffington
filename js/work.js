@@ -13,3 +13,20 @@ const prev = document.getElementById("prevBtn");
         list.scrollLeft += (itemWidth + padding);
         
     });
+
+
+    const blogPrev = document.getElementById("blogPrevBtn");
+    const blogNext = document.getElementById("blogNextBtn");
+    const blogList = document.getElementById("blogItemList");
+    const blogItemWidth = 500;
+    const blogPadding = 20;
+
+
+    blogPrev.addEventListener('click', () => {
+        blogList.scrollLeft -= (blogItemWidth + blogPadding);
+       
+    });
+    blogNext.addEventListener('click', () => {
+        blogList.scrollLeft += (blogItemWidth + blogPadding);
+        
+    });

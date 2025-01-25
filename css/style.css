@@ -305,28 +305,34 @@ h1 {
     margin-bottom: 20px;
 }
 
-
 .instagramPost {
-    height: auto;
+    margin-bottom: 80px;
 }
 
-.carouselView {
+
+.carouselView,
+.blogCarouselView {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.prevBtn {
+.prevBtn,
+.blogPrevBtn {
     margin: -100px 28px 0 2%;
     cursor: pointer;
 }
 
-.nextBtn {
+.nextBtn,
+.blogNextBtn {
     margin: -100px 2% 0 28px;
     cursor: pointer;
 }
+
 .prevBtn, 
-.nextBtn {
+.nextBtn,
+.blogPrevBtn,
+.blogNextBtn {
     background-color: transparent;
     color: #1D1616;
     font-size: 2rem;
@@ -337,7 +343,8 @@ h1 {
 }
     
 
-.itemList {
+.itemList,
+.blogItemList {
     max-width: 100%;
     width: 100vw;
     gap: 20px;
@@ -347,20 +354,22 @@ h1 {
     scroll-snap-type: x mandatory;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    height: 1060px;
+    height: 1000px;
 }
 
-.itemList::-webkit-scrollbar {
+.itemList::-webkit-scrollbar,
+.blogItemList::-webkit-scrollbar  {
     display: none;
 }
 
-.instagram-media {
-    height: 89%;
+.instagram-media,
+.blogItem {
+    height: auto;
     flex: 0 0 32%;
     scroll-snap-align: center;
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
 }
 
 /* Facebook Section */
@@ -379,19 +388,46 @@ h1 {
     margin: 0 auto 80px auto;
 }
 
-.facebookPost h2 {
-    font-size: 2rem;
-    margin-bottom: 80px;
-}
 
 iframe {
     width: 31.5%;
-    height: 520px;
+    height: 560px;
     margin-right: 20px;
 }
 
 .fbPostRight {
     margin-right: 0;
+}
+
+/* Blogs */
+
+.blogPost {
+    margin-bottom: 80px;
+}
+
+.blogHeading {
+    font-size: 2rem;
+    margin: 0 0 80px 10%;
+    ;
+}
+
+.blogItemList {
+    height: 500px;
+    gap: 50px;
+}
+
+.blogPrevBtn,
+.blogNextBtn {
+    margin-top: -50px;
+}
+
+.blogPhoto {
+    width: 92%;
+    margin-bottom: 20px;
+}
+
+.blogParagraph {
+    width: 90%;
 }
 
 
