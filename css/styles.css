@@ -1,0 +1,350 @@
+/* General Styles */
+
+html {
+    background-color: #eee;
+    font-family: "Archivo", sans-serif;
+}
+
+nav {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    opacity: 1;
+    color: #fff;
+}
+
+a:hover,
+.activePageBorder:hover,
+.photosActive {
+    opacity: .75;
+}
+
+.activePageBorder {
+    border: 1px solid #FFF;
+    border-radius: 2px;
+}
+
+
+
+/* Header Styles */
+
+header {
+    position: absolute;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px 0 0 5%;
+    animation: 1s fadein 0.5s forwards;
+    opacity: 0;
+    z-index: 1;
+}
+
+@keyframes fadein {
+    100% {
+        opacity: 1;
+    }
+}
+
+.logo {
+    width: 70%;
+}
+
+header nav {
+    display: flex;
+    margin-right: -15px;
+}
+
+header nav li {
+    padding: 10px;
+    font-size: .9rem;
+    margin-right: 15px;
+}
+
+/* Hero Styles */
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10% 80px;
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    min-height: 30vh;
+}
+
+.hero .backgroundImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    z-index: -1;
+    background-color: #80a3db;
+}
+
+.hero h1 {
+    font: bold 3rem "Rubik", sans-serif;
+}
+
+.heroContentArea {
+    opacity: 0;
+    margin-top: 100px;
+    animation: 1.2s slidefade 1.2s forwards;
+}
+
+@keyframes slidefade {
+    100% {
+        opacity: 1;
+        margin: 0;
+    }
+    
+}
+
+/* About Me Styles */
+
+.about {
+    display: flex;
+    justify-content: center;
+    margin: 100px 0;
+    font-family: "Rubik", sans-serif;
+}
+
+.aboutLeft {
+    width: 40%;
+}
+
+.aboutRight {
+    width: 40%;
+}
+
+.aboutHeading {
+    margin-bottom: 40px;
+    font: bold 2rem "Rubik", sans-serif;
+}
+
+.aboutParagraph {
+    width: 85%;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.connectIcon {
+    width: 6%;
+    margin-right: 15px;
+}
+
+.profilePhoto {
+    width: 100%;
+}
+
+/* Skills Styles */
+
+.skillsPicture {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: center;
+    margin: 0 auto;
+    width: 100%;
+    height: 800px;
+    background-image: url("../img/skills0.jpg");
+    background-size: cover; 
+    position: relative;  
+    text-align: center; 
+}
+
+.skillsPicture::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.skillsPicture button,
+.skillsPicture h2, 
+.skillsPicture p {
+    position: relative;
+}
+
+.skillsLeftButton, 
+.skillsRightButton {
+    background-color: transparent;
+    color: #FFF;
+    font-size: 2rem;
+    border: 2px solid #FFF;
+    border-radius: 50%;
+    padding: 4px 15px 10px 15px;
+    align-self: center;
+}
+
+.skillsLeftButton {
+    margin-left: 10%;
+}
+
+.skillsRightButton {
+    margin-right: 10%;
+}
+
+.skillsText {
+    color: #FFF;
+    align-self: center;
+}
+
+.skillsHeading {
+    font: bold 2rem "Rubik", sans-serif;
+    margin-bottom: 15px;
+    margin-top: 220px;
+}
+
+.skillsParagraph {
+    margin-bottom: 25px;
+}
+
+.skillsButton {
+    color: #fff;
+    font-weight: bold;
+    font-family: "Rubik", sans-serif;
+    margin-top: 120px;
+    padding: 15px;
+    background-color: #8E1616;
+    border: none;
+    border-radius: 5px;
+}
+
+.fade {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.show {
+    opacity: 1;
+}
+
+/* Testimonial Styles */
+
+.testimonials {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 80px 10%;
+    max-width: 80%;
+}
+
+.testimonialsHeader {
+    font: bold 2rem "Rubik", sans-serif;
+    margin:  80px 0 40px 10%;
+}
+
+.firstTestimonial,
+.secondTestimonial {
+    width: 50%;
+    line-height: 1.5;
+}
+
+.secondTestimonial {
+    margin-left: 10%;
+}
+
+.testimonialImage {
+    width: 100%;
+    margin: 0 0 30px 0;
+}
+
+.testimonialParagraph {
+    margin-bottom: 15px;
+    font-size: .9rem;
+}
+
+.testimonialLink {
+    color: #1D1616;
+    font: bold .9rem "Rubik", sans-serif;
+
+}
+
+/* Photo Styles */
+
+.photosHeader  {
+    position: static;
+}
+
+.photosA {
+    color: #1D1616;
+}
+
+.photosActive {
+    border: 1px solid #1D1616;
+    border-radius: 2px;
+}
+
+
+.photos {
+    max-height: 9600px;
+    max-width: 85rem;
+    margin: 20px auto 80px auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    object-fit: contain;
+}
+
+.photos img {
+    width: 32.5%;
+    margin: 0 0 10px 10px;
+    transition: transform 0.5s 
+}
+
+.photos img:hover {
+    transform: scale(1.01);
+    opacity: .9;
+    cursor: pointer;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #1D1616;
+}
+
+.mainFooter {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #FFF;
+    padding-top: 10px;
+    
+}
+
+.footerLeft {
+    margin-left: 10%;
+    line-height: 1.5;
+}
+
+.footerRight {
+    margin-right: 10%;
+}
+
+.footerSpan {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.footerIcon {
+    margin-right: 12px;
+    width: 38%;
+}
+
+.footerCopyright {
+    color: #fff;
+    padding-bottom: 25px;
+    text-align: center;
+    font-size: .9rem;
+}

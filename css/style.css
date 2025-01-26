@@ -18,35 +18,58 @@ h3 {
 /* Header */
 
 header {
+    position: absolute;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100px;
     padding: 0 5%;
+    background-color: #1D1616;
+    animation: 1s fadein 0.5s forwards;
+    opacity: 0;
+}
+
+@keyframes fadein {
+    100% {
+        opacity: 1;
+    }
 }
 
 .logo {
-    width: 15%;
+    width: 80%;
     margin-top: 10px;
 }
 
-ul {
+nav {
     display: flex;
 }
 
-li {
+nav li {
     margin-right: 25px;
     font-size: .8rem;
 }
 
-.headerA {
+a {
     text-decoration: none;
-    color: black;
+    opacity: 1;
+}
+
+a:hover {
+    opacity: .65;
+}
+
+.headerA {
+    color: #fff;
     padding: 10px;
 }
 
 .myWork {
     margin-right: 0;
+}
+
+.hero {
+    position: relative;
+    justify-content: center;
 }
 
 .backgroundImage {
@@ -64,33 +87,12 @@ li {
     align-items: center;
 }
 
-.activePage {
-    border: 1px solid black;
+.activePageBorder {
+    border: 1px solid #FFF;
     border-radius: 2px;
 }
 
 
-.photos {
-    max-height: 9600px;
-    max-width: 85rem;
-    margin: 20px auto 0 auto;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    object-fit: contain;
-}
-
-.photos img {
-    width: 32.5%;
-    margin: 0 0 10px 10px;
-    transition: transform 0.5s 
-}
-
-.photos img:hover {
-    transform: scale(1.01);
-    opacity: .9;
-    cursor: pointer;
-}
 
 .about {
     display: flex;
@@ -129,12 +131,15 @@ h1 {
 
 .aboutButton,
 .skillsButton {
-    background-color: #8E1616;
+    background-color: #D84040;
     color: #EEEEEE;
-    font-size: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: .9rem;
     padding: 15px;
     border: none;
-    border-radius: 3px;
+    border-radius: 5px;
 }
 
 
@@ -406,9 +411,20 @@ iframe {
 }
 
 .blogHeading {
-    font-size: 2rem;
-    margin: 0 0 80px 10%;
-    ;
+    margin: 0 auto 80px auto;
+    text-align: center;
+}
+
+.blogHeader {
+    font-size: 2.8rem;
+    font-weight: bold;
+    display: inline;
+    margin-top: -10px;
+}
+
+.blogIcon {
+    width: 50px;
+    margin-right: 10px;
 }
 
 .blogItemList {
@@ -436,7 +452,7 @@ iframe {
 footer {
     width: 100%;
     height: 150px;
-    background-color: #1D1616;
+    background-color: #8E1616;
     display: flex;
     justify-content: space-between;
     align-items: center;

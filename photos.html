@@ -11,20 +11,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header class="static">
-        <img class="logo" id="prevtn" src="img/logo.png" alt="logo"></img>
-        <nav class="links">
-            <ul>
-                <li><a class="headerA" href="index.html">HOME</a></li>
-                <li><a class="activePage headerA" href="photos.html">PHOTOGRAPHY</a></li>
-                <li ><a class="myWork headerA" href="work.html">MY WORK</a></li>
-                
-            </ul>
+    <header class="photosHeader">
+        <a href="index.html"><img class="logo" src="img/logo.png" alt="logo"></a>
+        <nav>
+            <li><a class="photosA" href="index.html">HOME</a></li>
+            <li class="activePageBorder photosActive"><a class="photosA" href="photos.html">PHOTOGRAPHY</a></li>
+            <li><a class="photosA" href="work.html">MY WORK</a></li>
         </nav>
     </header>
+
     <section class="photos">
         <img src="img/Jazmin+-+SocialLite+Wyndham+CWB+(20).jpg" alt="woman relaxing">
         <img src="img/_DSF1597-edited.jpg" alt="dinner table">
@@ -78,19 +76,21 @@
     </section>
 
     <footer>
-        <div class="footerLeft">
-            <span class="footerSpan">Home</span>
-            <span class="footerSpan">Photography</span>
-            <span class="footerSpan">My Work</span>
-        </div>
-        <div class="footerRight">
-            <span>Lets Connect</span>
-            <img src="img/linkedinwhite.png" alt="">
-            <img src="img/whatsappwhite.png" alt="">
-            <img src="img/gmailwhite.png" alt="">
-        </div>
+        <section class="mainFooter">
+            <div class="footerLeft">
+                <a href="index.html"><span class="footerSpan">Home</span></a>
+                <a href="photos.html"><span class="footerSpan">Photography</span></a>
+                <a href="work.html"><span class="footerSpan">My Work</span></a>
+            </div>
+            <div class="footerRight">
+                <span class="footerSpan">Lets Connect:</span>
+                <a href="https://www.linkedin.com/in/jazmin-aguilar-buffington/"><img class="footerIcon" src="img/linkedinwhite.png" alt="linkedin icon"></a>
+                <a href="mailto:jazmin.a.buffington@gmail.com"><img src="img/gmailwhite.png" alt="gmail icon"></a>
+            </div>
+        </section>
+        <h3 class="footerCopyright">@ 2025 Social Buffington. All rights reserved</h3>
     </footer>
-   
+
     <script src="js/app.js"></script>
 </body>
 </html>

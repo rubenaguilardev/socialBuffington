@@ -4,35 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jazmin Buffington's Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <main>
-        <header>
-            <img class="logo" src="img/logo.png" alt="logo"></img>
-            <nav class="links">
-                <ul>
-                    <li><a class="activePage headerA" href="index.html">HOME</a></li>
-                    <li><a class="headerA" href="photos.html">PHOTOGRAPHY</a></li>
-                    <li><a class="myWork headerA" href="work.html">MY WORK</a></li>    
-                </ul>
-            </nav>
-        </header>
+    <header>
+        <a href="index.html"><img class="logo" src="img/logo.png" alt="logo"></a>
+        <nav>
+            <li class="activePageBorder"><a href="index.html">HOME</a></li>
+            <li><a href="photos.html">PHOTOGRAPHY</a></li>
+            <li><a href="work.html">MY WORK</a></li>
+        </nav>
+    </header>
 
-        <section  class="backgroundImage">
-            <h2 class="heading">SOCIAL MEDIA.DIGITAL MARKETING.PHOTOGRAPHER</h2>
-        </section>
-    </main>
+    <section class="hero">
+        <div class="backgroundImage" style="background-image: url(img/_DSF3044-edited.jpg);"></div>
+        <div class="heroContentArea">
+            <h1><a href="work.html">SOCIAL MEDIA.</a><a href="work.html">DIGITAL MARKETING.</a><a href="photos.html">PHOTOGRAPHER</a></h1>
+        </div>
+    </section>
+
     <section class="about">
         <section class="aboutLeft">
-            <h1>Hi, I'm Jazmin Buffington</h1>
+            <h2 class="aboutHeading">Hi, I'm Jazmin Buffington</h2>
             <p class="aboutParagraph">
                 A dynamic marketing guru with a passion for creativity and innovation. 
                 With over a decade of experience under my belt, I specialize in all things social media, digital marketing, 
@@ -43,44 +41,38 @@
                 Intrigued? Let's connect!
             </p>
             <a href="https://www.linkedin.com/in/jazmin-aguilar-buffington/"><img src="img/linkedin.png" alt="linkedin icon" class="connectIcon"></a>
-            <img src="img/whatsapp.png" alt="whatsapp icon" class="connectIcon">
             <a href="mailto:jazmin.a.buffington@gmail.com"><img src="img/Gmail.png" alt="gmail icon" class="connectIcon"></a>
         </section>
         <section class="aboutRight">
             <img class="profilePhoto" src="img/IMG_1064-2.jpg" alt="me">
         </section>
-        
     </section>
 
-
-    
-    <div class="skillsPicture" id="skillsBackground">
-        <button class="leftScroll" id="leftScroll"><</button>
-        <div class="scrollText">
-            <h2 class="scrollH2">Creative Storytelling</h2>
-            <p class="scrollP">Crafted to captivate and inspire</p>
-            <a href="work.html"><button class="skillsButton btn">View My Work</button></a>
-        </div>
-        
-        <button class="rightScroll" id="rightScroll">></button>
-    </div>
-
+    <section class="skillsPicture fade" id="skillsBackground">
+        <button class="skillsLeftButton" id="skillsLeftButton"><</button>
+        <div class="skillsText fade show">
+            <h2 class="skillsHeading fade show">Creative Storytelling</h2>
+            <p class="skillsParagraph fade show">Crafted to captivate and inspire</p>
+            <a href="work.html"><button class="skillsButton btn fade show">VIEW MY WORK</button></a>
+        </div> 
+        <button class="skillsRightButton" id="skillsRightButton">></button>
+    </section>
 
     <section>
         <h2 class="testimonialsHeader">Testimonials</h2>
         <section class="testimonials">
-            <div class="first">
-                <img src="img/marga.png" alt="" class="testImage">
-                <p class="testP">
+            <div class="firstTestimonial">
+                <img src="img/marga.png" alt="" class="testimonialImage">
+                <p class="testimonialParagraph">
                     “Jazmin is a strategic and creative social media professional. She stays updated on the trends across all platforms 
                     to create thoughtful and clever campaigns that are on-brand, resonate with our audience, generate positive engagement 
                     and deliver a solid ROI. Her ability to listen and ask key questions make her a great collaborator and solid team player.”
                 </p>
-                <span><a href="https://www.linkedin.com/in/greg-lutchko-77605b8?trk=public_profile_recommendations">- Greg Lutchko</a></span>
+                <span><a class="testimonialLink" href="https://www.linkedin.com/in/greg-lutchko-77605b8?trk=public_profile_recommendations">- Greg Lutchko</a></span>
             </div>
-            <div class="second">
-                <img src="img/storks.png" alt="" class="testImage">
-                <p class="testP">
+            <div class="secondTestimonial">
+                <img src="img/storks.png" alt="" class="testimonialImage">
+                <p class="testimonialParagraph">
                     "I had the privilege of working with Jazmin for over a decade. The first few years where we worked side by side, 
                     I knew Jazmin’s tenacity, creativity, and hunger for learning will always make her one of the best assets on any 
                     team she joins. It was rewarding to see her grow from a Part-Time Consultant to a Guest Service Manager, to a Community 
@@ -90,31 +82,27 @@
                     the vision, the passion, and loyalty that makes her a key element for her team's success! PS- Her culinary talent is an 
                     exquisite added bonus!" 
                 </p>
-                <span><a href="https://www.linkedin.com/in/annie-tang-humphrey-32a7349/">- Annie Humphrey</a></span>
+                <span><a class="testimonialLink" href="https://www.linkedin.com/in/annie-tang-humphrey-32a7349/">- Annie Humphrey</a></span>
             </div>
         </section>
-        
     </section>
 
-   
-
     <footer>
-        <div class="footerLeft">
-            <span class="footerSpan">Home</span>
-            <span class="footerSpan">Photography</span>
-            <span class="footerSpan">My Work</span>
-        </div>
-        <div class="footerRight">
-            <span>Lets Connect</span>
-            <img src="img/linkedinwhite.png" alt="">
-            <img src="img/whatsappwhite.png" alt="">
-            <img src="img/gmailwhite.png" alt="">
-        </div>
+        <section class="mainFooter">
+            <div class="footerLeft">
+                <a href="index.html"><span class="footerSpan">Home</span></a>
+                <a href="photos.html"><span class="footerSpan">Photography</span></a>
+                <a href="work.html"><span class="footerSpan">My Work</span></a>
+            </div>
+            <div class="footerRight">
+                <span class="footerSpan">Lets Connect:</span>
+                <a href="https://www.linkedin.com/in/jazmin-aguilar-buffington/"><img class="footerIcon" src="img/linkedinwhite.png" alt="linkedin icon"></a>
+                <a href="mailto:jazmin.a.buffington@gmail.com"><img src="img/gmailwhite.png" alt="gmail icon"></a>
+            </div>
+        </section>
+        <h3 class="footerCopyright">@ 2025 Social Buffington. All rights reserved</h3>
     </footer>
 
-    
-
- 
     <script src="js/app.js"></script>
 </body>
 </html>

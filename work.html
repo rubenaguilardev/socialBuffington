@@ -10,7 +10,7 @@
 <body>
     <main>
         <header>
-            <img class="logo" src="img/logo.png" alt="logo"></img>
+            <a href="index.html"><img class="logo" src="img/logo.png" alt="logo"></img></a>
             <nav class="links">
                 <ul>
                     <li><a class="headerA" href="index.html">HOME</a></li>
@@ -74,14 +74,18 @@
         </section>
 
         <section class="blogPost">
-            <h2 class="blogHeading">Blogs</h2>
+            <div class="blogHeading">
+                <img src="img/blogicon.png" alt="" class="blogIcon">
+                <h2 class="blogHeader">Blog Posts</h2>
+            </div>
+            
             <section class="blogPost">
                 <div class="blogCarouselView">
                     <button id="blogPrevBtn" class="blogPrevBtn"><</button>
                     <div id="blogItemList" class="blogItemList">
                         <div class="blogItem">
-                            <img class="blogPhoto" src="img/Coldwell+Banker.png" alt="">
-                            <p class="blogParagraph">6 Home Décor Styles — and Engagement Rings to Match</p>
+                            <a href="https://blog.coldwellbanker.com/6-home-decor-styles-engagement-rings-match/"><img class="blogPhoto" src="img/Coldwell+Banker.png" alt=""></a>
+                            <a href="https://blog.coldwellbanker.com/6-home-decor-styles-engagement-rings-match/"><p class="blogParagraph">6 Home Décor Styles — and Engagement Rings to Match</p></a>
                         </div>
                         <div class="blogItem">
                             <img class="blogPhoto" src="img/Coldwell+Banker-2.png" alt="">
@@ -110,7 +114,6 @@
             <div class="footerRight">
                 <span>Lets Connect</span>
                 <img src="img/linkedinwhite.png" alt="">
-                <img src="img/whatsappwhite.png" alt="">
                 <img src="img/gmailwhite.png" alt="">
             </div>
         </footer>
