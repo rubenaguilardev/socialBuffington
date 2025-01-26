@@ -17,8 +17,9 @@ a {
 
 a:hover,
 .activePageBorder:hover,
-.photosActive {
-    opacity: .75;
+.photosActive:hover {
+    opacity: .70;
+    cursor: pointer;
 }
 
 .activePageBorder {
@@ -136,6 +137,7 @@ header nav li {
 .connectIcon {
     width: 6%;
     margin-right: 15px;
+    
 }
 
 .profilePhoto {
@@ -191,6 +193,12 @@ header nav li {
 .skillsRightButton {
     margin-right: 10%;
 }
+
+.skillsLeftButton:hover,
+.skillsRightButton:hover {
+    opacity: .70;
+}
+
 
 .skillsText {
     color: #FFF;
@@ -282,27 +290,35 @@ header nav li {
     border-radius: 2px;
 }
 
-
 .photos {
     max-height: 9600px;
     max-width: 85rem;
-    margin: 20px auto 80px auto;
+    margin: 40px auto 80px auto;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     object-fit: contain;
+    
 }
 
 .photos img {
     width: 32.5%;
     margin: 0 0 10px 10px;
-    transition: transform 0.5s 
+    transition: transform 0.5s;
+    opacity: 0;
+    animation: 1.2s fadein 1.2s forwards;
+    -webkit-filter: brightness(100%);
+    margin-bottom: 10px;
 }
 
 .photos img:hover {
-    transform: scale(1.01);
-    opacity: .9;
-    cursor: pointer;
+        -webkit-filter: brightness(70%);
+        -webkit-transition: all 1s ease;
+        -moz-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        -ms-transition: all 1s ease;
+        transition: all 1s ease;
+        cursor: pointer;
 }
 
 
@@ -319,7 +335,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     color: #FFF;
-    padding-top: 10px;
+    padding-top: 15px;
     
 }
 
