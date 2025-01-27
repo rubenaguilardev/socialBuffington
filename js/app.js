@@ -1,5 +1,7 @@
 function main() {
 
+   
+
     let changeImage = document.getElementById("skillsBackground");
     let changeSkillsH2 = document.querySelector(".skillsHeading");
     let changeSkillsP = document.querySelector(".skillsParagraph");
@@ -78,6 +80,18 @@ function changeSkill(index) {
     }, 600);
 
 }
+
+    const primaryHeader = document.querySelector(".primaryHeader");
+    const scrollWatcher = document.createElement('div');
+
+    scrollWatcher.setAttribute('data-scroll-watcher', '');
+    primaryHeader.before(scrollWatcher);
+
+    const navObserver = new IntersectionObserver(function (entries) {
+    primaryHeader.classList.toggle('sticking', !entries[0].isIntersecting)
+    });
+
+    navObserver.observe(scrollWatcher);
 
 
 }

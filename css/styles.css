@@ -22,17 +22,21 @@ a:hover,
     cursor: pointer;
 }
 
-.activePageBorder {
-    border: 1px solid #FFF;
+.photosActive {
+    border: 1px solid #1D1616;
     border-radius: 2px;
 }
 
+.logo {
+    margin-bottom: 20px;
+}
 
 
 /* Header Styles */
 
-header {
-    position: absolute;
+.primaryHeader {
+    position: sticky;
+    top: 0;
     width: 90%;
     display: flex;
     justify-content: space-between;
@@ -40,7 +44,24 @@ header {
     margin: 25px 0 0 5%;
     animation: 1s fadein 0.5s forwards;
     opacity: 0;
-    z-index: 1;
+    z-index: 10;
+}
+
+.primaryHeader.sticking {
+    background-color: #eee;
+    margin: 0;
+    padding: 0 5%;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.primaryHeader.sticking .logo {
+    width: 50%;
+    margin: 5px 0 5px 0;
+}
+
+.primaryHeader.sticking nav {
+    padding-top: 18px;
 }
 
 @keyframes fadein {
@@ -50,18 +71,23 @@ header {
 }
 
 .logo {
-    width: 70%;
+    width: 60%;
 }
 
 header nav {
     display: flex;
-    margin-right: -15px;
+    margin: -20px -15px 0 0;
 }
 
 header nav li {
     padding: 10px;
     font-size: .9rem;
     margin-right: 15px;
+    
+}
+
+header nav li a {
+    color: #1D1616;
 }
 
 /* Hero Styles */
@@ -70,11 +96,11 @@ header nav li {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-image: url("../img/_DSF3044-edited.jpg");
     padding: 10% 80px;
-    position: relative;
     justify-content: center;
     text-align: center;
-    min-height: 30vh;
+    min-height: 28vh;
 }
 
 .hero .backgroundImage {
@@ -85,7 +111,7 @@ header nav li {
     height: 100%;
     background-size: cover;
     z-index: -1;
-    background-color: #80a3db;
+    background-color: #eee;
 }
 
 .hero h1 {
@@ -153,11 +179,13 @@ header nav li {
     align-content: center;
     margin: 0 auto;
     width: 100%;
-    height: 800px;
+    height: 750px;
     background-image: url("../img/skills0.jpg");
     background-size: cover; 
+    background-color: #1D1616 ;
     position: relative;  
     text-align: center; 
+    z-index: 1;
 }
 
 .skillsPicture::before {
@@ -167,6 +195,7 @@ header nav li {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, .5);
+    z-index: 0;
 }
 
 .skillsPicture button,
@@ -208,7 +237,7 @@ header nav li {
 .skillsHeading {
     font: bold 2rem "Rubik", sans-serif;
     margin-bottom: 15px;
-    margin-top: 220px;
+    margin-top: 200px;
 }
 
 .skillsParagraph {
@@ -219,7 +248,7 @@ header nav li {
     color: #fff;
     font-weight: bold;
     font-family: "Rubik", sans-serif;
-    margin-top: 120px;
+    margin-top: 100px;
     padding: 15px;
     background-color: #8E1616;
     border: none;
@@ -277,28 +306,15 @@ header nav li {
 
 /* Photo Styles */
 
-.photosHeader  {
-    position: static;
-}
-
-.photosA {
-    color: #1D1616;
-}
-
-.photosActive {
-    border: 1px solid #1D1616;
-    border-radius: 2px;
-}
-
 .photos {
     max-height: 9600px;
     max-width: 85rem;
-    margin: 40px auto 80px auto;
+    margin: 20px auto 60px auto;
+    padding-right: 10px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     object-fit: contain;
-    
 }
 
 .photos img {
@@ -312,13 +328,13 @@ header nav li {
 }
 
 .photos img:hover {
-        -webkit-filter: brightness(70%);
-        -webkit-transition: all 1s ease;
-        -moz-transition: all 1s ease;
-        -o-transition: all 1s ease;
-        -ms-transition: all 1s ease;
-        transition: all 1s ease;
-        cursor: pointer;
+    -webkit-filter: brightness(70%);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+    cursor: pointer;
 }
 
 
