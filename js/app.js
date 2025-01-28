@@ -1,36 +1,30 @@
-function main() {
-
-   
-
-    let changeImage = document.getElementById("skillsBackground");
-    let changeSkillsH2 = document.querySelector(".skillsHeading");
-    let changeSkillsP = document.querySelector(".skillsParagraph");
-    let changeSkillsButton = document.querySelector(".skillsButton");
-    let skillsLeftButton = document.getElementById("skillsLeftButton");
-    let skillsRightButton = document.getElementById("skillsRightButton");
-    let i = 0;
+let changeImage = document.getElementById("skillsBackground");
+let changeSkillsH2 = document.querySelector(".skillsHeading");
+let changeSkillsP = document.querySelector(".skillsParagraph");
+let changeSkillsButton = document.querySelector(".skillsButton");
+let skillsLeftButton = document.getElementById("skillsLeftButton");
+let skillsRightButton = document.getElementById("skillsRightButton");
+let i = 0;
 
 
-    skillsRightButton.addEventListener('click', function() {
-        i++;
-        if (i > 3) i = 0;
-        changeSkill(i);
+skillsRightButton.addEventListener('click', function() {
+    i++;
+    if (i > 3) i = 0;
+    changeSkill(i);
+});
+
+skillsLeftButton.addEventListener('click', function() {
+    i--;
+    if (i < 0) i = 3;
+    changeSkill(i);
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.fade').forEach((element) => {
+        element.classList.add('show');
     });
+});
 
-    skillsLeftButton.addEventListener('click', function() {
-        i--;
-        if (i < 0) i = 3;
-        changeSkill(i);
-    });
-
-    document.addEventListener('DOMContentLoaded', function () {
-        document.querySelectorAll('.fade').forEach((element) => {
-            element.classList.add('show');
-        });
-    });
-    
-
-    
 
 function changeSkill(index) {
 
@@ -78,22 +72,18 @@ function changeSkill(index) {
             element.classList.add('show');
         });
     }, 600);
-
 }
 
-    const primaryHeader = document.querySelector(".primaryHeader");
-    const scrollWatcher = document.createElement('div');
 
-    scrollWatcher.setAttribute('data-scroll-watcher', '');
-    primaryHeader.before(scrollWatcher);
+const primaryHeader = document.querySelector(".primaryHeader");
+const scrollWatcher = document.createElement('div');
 
-    const navObserver = new IntersectionObserver(function (entries) {
+scrollWatcher.setAttribute('data-scroll-watcher', '');
+primaryHeader.before(scrollWatcher);
+
+const navObserver = new IntersectionObserver(function (entries) {
     primaryHeader.classList.toggle('sticking', !entries[0].isIntersecting)
-    });
+});
 
-    navObserver.observe(scrollWatcher);
+navObserver.observe(scrollWatcher);
 
-
-}
-
-main()

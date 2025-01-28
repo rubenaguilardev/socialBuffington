@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body onload="getPics()">
     <header class="primaryHeader">
         <a href="index.html"><img class="logo" src="img/photoslogo.png" alt="logo"></a>
         <nav>
@@ -74,6 +74,10 @@
         <img src="img/_DSF6357-edited-2.jpg" alt="shampagne in bed">
         <img src="img/_DSF4230.jpg" alt="crab">
     </section>
+    <div id="fullpage" onclick="this.style.display='none';">
+        <button id="photosPrevBtn">&#10094;</button>
+        <button id="photosNextBtn">&#10095;</button>
+    </div>
 
     <footer>
         <section class="mainFooter">
