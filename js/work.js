@@ -11,20 +11,20 @@ const navObserver = new IntersectionObserver(function (entries) {
 navObserver.observe(scrollWatcher);
 
 
-const prev = document.getElementById("instagramPrevBtn");
-const next = document.getElementById("instagramNextBtn");
+const instagramPrev = document.getElementById("instagramPrevBtn");
+const instagramNext = document.getElementById("instagramNextBtn");
 const list = document.getElementById("instagramItemList");
 const itemWidth = 540;
 const padding = 10;
 
-
-prev.addEventListener('click', () => {
-    list.scrollLeft -= (itemWidth + padding);
-    
+instagramPrev.addEventListener('click', function() {
+    list.scrollLeft -= (itemWidth + padding); 
+    buttonAnimation(instagramPrev)  
 });
-next.addEventListener('click', () => {
+
+instagramNext.addEventListener('click', function() {
     list.scrollLeft += (itemWidth + padding);
-    
+    buttonAnimation(instagramNext)
 });
 
 
@@ -35,11 +35,23 @@ const blogItemWidth = 620;
 const blogPadding = 20;
 
 
-blogPrev.addEventListener('click', () => {
+blogPrev.addEventListener('click', function() {
+    buttonAnimation(blogPrev)
     blogList.scrollLeft -= (blogItemWidth + blogPadding);
     
 });
-blogNext.addEventListener('click', () => {
+blogNext.addEventListener('click', function() {
+    buttonAnimation(blogNext)
     blogList.scrollLeft += (blogItemWidth + blogPadding);
     
 });
+
+
+function buttonAnimation (currentButton) {
+
+    currentButton.classList.add("darkPressed");
+
+    setTimeout(function() {
+        currentButton.classList.remove("darkPressed");
+    }, 100);
+}

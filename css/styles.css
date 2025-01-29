@@ -1,8 +1,9 @@
 /* General Styles */
 
 html {
-    background-color: #eee;
     font-family: "Archivo", sans-serif;
+    background-color: #eee;
+    color: #222831;
 }
 
 nav {
@@ -23,8 +24,8 @@ a:hover,
 }
 
 .photosActive {
-    border: 1px solid #1D1616;
-    border-radius: 2px;
+    border: 1px solid #222831;
+    border-radius: 5px;
 }
 
 .logo {
@@ -87,7 +88,12 @@ header nav li {
 }
 
 header nav li a {
-    color: #1D1616;
+    color: #222831;
+}
+
+.navLinked {
+    width: 40%;
+
 }
 
 /* Hero Styles */
@@ -142,16 +148,14 @@ header nav li a {
 .about {
     display: flex;
     justify-content: center;
-    margin: 100px 0;
+    margin: 100px auto 100px auto;
     font-family: "Rubik", sans-serif;
+    max-width: 1500px;
 }
 
-.aboutLeft {
-    width: 40%;
-}
-
+.aboutLeft,
 .aboutRight {
-    width: 40%;
+    width: 45%;
 }
 
 .aboutHeading {
@@ -173,33 +177,68 @@ header nav li a {
 
 .profilePhoto {
     width: 100%;
+    max-width: 100%;
 }
+
+
 
 /* Skills Styles */
 
 .skillsPicture {
+    background-image: url("../img/skills0.jpg");
+    background-size: cover;  
+    position: relative; 
+    }
+
+.skillsPicture:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+    
+.skillsContainer {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     align-content: center;
     margin: 0 auto;
     width: 100%;
+    max-width: 1500px;
     height: 750px;
-    background-image: url("../img/skills0.jpg");
-    background-size: cover; 
-    background-color: #1D1616 ;
     position: relative;  
     text-align: center; 
     z-index: 1;
 }
 
-.skillsPicture::before {
+
+
+
+.skillsContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1500px;
+    height: 750px;
+    position: relative;  
+    text-align: center; 
+    z-index: 1;
+}
+
+.skillsContainer::before {
     content: "";
     position: absolute;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, .5);
     z-index: 0;
 }
 
@@ -219,7 +258,7 @@ header nav li a {
     color: #FFF;
     font-size: 1.5rem;
     border: 2px solid white;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 5px 15px 10px 15px;
     align-self: center; 
 }
@@ -243,6 +282,11 @@ header nav li a {
     cursor: pointer;
 }
 
+.pressed {
+    box-shadow: 0 3px 4px 0 #DBEDF3;
+    opacity: 0.5;
+}
+
 .skillsText {
     color: #FFF;
     align-self: center;
@@ -264,14 +308,14 @@ header nav li a {
     font-family: "Rubik", sans-serif;
     margin-top: 100px;
     padding: 15px;
-    background-color: #8E1616;
+    background-color: #76ABAE;
     border: none;
     border-radius: 5px;
 }
 
 .fade {
     opacity: 0;
-    transition: opacity 1s ease-in-out;
+    transition: opacity 1.5s ease-in-out;
 }
 
 .show {
@@ -280,41 +324,51 @@ header nav li a {
 
 /* Testimonial Styles */
 
-.testimonials {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 0 80px 10%;
-    max-width: 80%;
+.testimonialHeaderContainer {
+    margin:  100px auto 40px auto;
+    width: 100%;
+    max-width: 1500px;
 }
 
 .testimonialsHeader {
-    font: bold 2rem "Rubik", sans-serif;
-    margin:  80px 0 40px 10%;
+    font: bold 2rem "Rubik", sans-serif; 
+    color: #222831;
+    margin: 0 auto;
+    width: 90%;  
 }
+
+.testimonials {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 100px auto;
+    max-width: 1500px;
+    width: 100%;
+}
+
 
 .firstTestimonial,
 .secondTestimonial {
-    width: 50%;
+    width: 40%;
     line-height: 1.5;
 }
 
-.secondTestimonial {
-    margin-left: 10%;
+.firstTestimonial {
+    margin-right: 10%;
 }
 
 .testimonialImage {
     width: 100%;
+    max-width: 100%;
     margin: 0 0 30px 0;
 }
 
 .testimonialParagraph {
     margin-bottom: 15px;
-    font-size: .9rem;
 }
 
 .testimonialLink {
-    color: #1D1616;
-    font: bold .9rem "Rubik", sans-serif;
+    color: #222831;
+    font: bold 1rem "Rubik", sans-serif;
 
 }
 
@@ -514,8 +568,13 @@ header nav li a {
 .instagramNextBtn,
 .blogPrevBtn,
 .blogNextBtn {
-    color: #1D1616;
-    border-color: #1D1616;
+    color: #222831;
+    border-color: #222831;
+}
+
+.darkPressed {
+    box-shadow: 0 3px 4px 0 #222831;
+    opacity: 0.5;
 }
 
 
@@ -527,6 +586,11 @@ header nav li a {
 
 /* Facebook Section */
 
+.facebookSection {
+    background-color: white;
+    padding: 80px 0 40px 0;
+}
+
 .fbLogo {
     width: 18%;
     display: block;
@@ -537,13 +601,14 @@ header nav li a {
     display: flex;
     width: 80%;
     text-align: center;
-    margin: 80px 0 90px 10%;
+    margin: 80px 0 60px 10%;  
 }
 
 iframe {
     width: 33%;
     margin-right: 20px;
 }
+
 
 .lastIframe {
     align-self: flex-start;
@@ -558,7 +623,8 @@ iframe {
     width: 20%;
     display: block;
     margin: 0 auto;
-    margin-bottom: 80px;
+    margin: 80px auto 80px auto;
+    text-align: center;
 }
 
 .blogPrevBtn {
@@ -575,11 +641,13 @@ iframe {
 }
 
 .blogItem a {
-    color: #1D1616;
+    color: #222831;
 }
 
 .blogItem a p {
     margin-top: 20px;
+    text-align: center;
+    line-height: 1.5;
 }
 
 
@@ -587,11 +655,13 @@ iframe {
 /* Footer */
 
 footer {
-    background-color: #1D1616;
+    background-color: #222831;
 }
 
 .mainFooter {
-    width: 100%;
+    width: 90%;
+    max-width: 1500px;
+    margin: 0 auto;
     height: 120px;
     display: flex;
     justify-content: space-between;
@@ -602,13 +672,9 @@ footer {
 }
 
 .footerLeft {
-    margin-left: 10%;
     line-height: 1.5;
 }
 
-.footerRight {
-    margin-right: 10%;
-}
 
 .footerSpan {
     display: block;
@@ -617,7 +683,7 @@ footer {
 
 .footerIcon {
     margin-right: 12px;
-    width: 38%;
+    width: 30%;
 }
 
 .footerCopyright {

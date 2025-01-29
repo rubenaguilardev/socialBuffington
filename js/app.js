@@ -10,12 +10,14 @@ let i = 0;
 skillsRightButton.addEventListener('click', function() {
     i++;
     if (i > 3) i = 0;
+    buttonAnimation(skillsRightButton);
     changeSkill(i);
 });
 
 skillsLeftButton.addEventListener('click', function() {
     i--;
     if (i < 0) i = 3;
+    buttonAnimation(skillsLeftButton);
     changeSkill(i);
 });
 
@@ -87,3 +89,12 @@ const navObserver = new IntersectionObserver(function (entries) {
 
 navObserver.observe(scrollWatcher);
 
+
+function buttonAnimation (currentButton) {
+
+    currentButton.classList.add("pressed");
+
+    setTimeout(function() {
+        currentButton.classList.remove("pressed");
+    }, 100);
+}

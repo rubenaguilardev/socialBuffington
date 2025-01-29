@@ -29,17 +29,32 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    
-    document.querySelector('#photosPrevBtn').addEventListener('click', (event) => {
+    const photosPrev = document.getElementById("photosPrevBtn");
+    const photosNext = document.getElementById("photosNextBtn");
+
+    photosPrev.addEventListener('click', function (event) {
         event.stopPropagation();
         currentIndex = (currentIndex - 1 + imgs.length) % imgs.length;
         showImage(currentIndex);
+        buttonAnimation(photosPrev)
     });
 
-    document.querySelector('#photosNextBtn').addEventListener('click', (event) => {
+    
+    photosNext.addEventListener('click', function (event){
         event.stopPropagation();
         currentIndex = (currentIndex + 1) % imgs.length;
         showImage(currentIndex);
+        buttonAnimation(photosNext);
     });
 
 });
+
+
+function buttonAnimation (currentButton) {
+
+    currentButton.classList.add("pressed");
+
+    setTimeout(function() {
+        currentButton.classList.remove("pressed");
+    }, 100);
+}
