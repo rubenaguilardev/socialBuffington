@@ -14,7 +14,7 @@ navObserver.observe(scrollWatcher);
 const instagramPrev = document.getElementById("instagramPrevBtn");
 const instagramNext = document.getElementById("instagramNextBtn");
 const list = document.getElementById("instagramItemList");
-const itemWidth = 540;
+const itemWidth = 340;
 const padding = 10;
 
 instagramPrev.addEventListener('click', function() {
