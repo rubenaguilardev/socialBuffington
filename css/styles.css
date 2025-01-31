@@ -1,9 +1,11 @@
 /* General Styles */
 
-html {
-    font-family: "Archivo", sans-serif;
-    background-color: #eee;
-    color: #222831;
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i");
+
+body {
+    font-family: "Source Pro Sans", sans-serif;
+    background-color: #fff;
+    color: #000;
 }
 
 nav {
@@ -13,7 +15,12 @@ nav {
 a {
     text-decoration: none;
     opacity: 1;
-    color: #fff;
+    
+}
+
+h1 {
+    color: #000;
+    font-size: 3rem;
 }
 
 a:hover,
@@ -24,12 +31,18 @@ a:hover,
 }
 
 .photosActive {
-    border: 1px solid #222831;
+    border: 1px solid #000;
     border-radius: 2px;
 }
 
 .logo {
     margin-bottom: 20px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
 
@@ -42,10 +55,11 @@ a:hover,
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 25px 0 0 5%;
+    margin: 20px 0 0 5%;
     animation: 1s fadein 0.5s forwards;
     opacity: 0;
     z-index: 10;
+    height: 60px;
 }
 
 .primaryHeader.sticking {
@@ -92,7 +106,7 @@ header nav li {
 }
 
 header nav li a {
-    color: #222831;
+    color: #000;
 }
 
 .navLinked {
@@ -100,19 +114,19 @@ header nav li a {
 
 }
 
+
 /* Hero Styles */
 
 .hero,
 .workHero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-image: url("../img/_DSF3044-edited.jpg");
+    
+   
+    background-image: url("../img/cover.png");
     background-size: cover;
-    padding: 10% 80px;
-    justify-content: center;
-    text-align: center;
-    min-height: 28vh;
+    background-position: right;
+
+    flex: .6;
+    
 }
 
 .hero .backgroundImage,
@@ -121,15 +135,15 @@ header nav li a {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
     background-size: cover;
     z-index: -1;
-    background-color: #eee;
+    background-color: #000;
 }
 
-.hero h1,
-.workHero h2 {
-    font: bold 3rem "Rubik", sans-serif;
+.intro {
+    border: 1px dashed black;
+    flex: .4;
+    
 }
 
 .heroContentArea,
@@ -137,6 +151,8 @@ header nav li a {
     opacity: 0;
     margin-top: 100px;
     animation: 1.2s slidefade 1.2s forwards;
+    
+    color: #000;
 }
 
 @keyframes slidefade {
@@ -153,7 +169,6 @@ header nav li a {
     display: flex;
     justify-content: center;
     margin: 100px auto 100px auto;
-    font-family: "Rubik", sans-serif;
     max-width: 1500px;
 }
 
@@ -164,7 +179,6 @@ header nav li a {
 
 .aboutHeading {
     margin-bottom: 40px;
-    font: bold 2rem "Rubik", sans-serif;
 }
 
 .aboutParagraph {
@@ -297,7 +311,6 @@ header nav li a {
 }
 
 .skillsHeading {
-    font: bold 2rem "Rubik", sans-serif;
     margin-bottom: 15px;
     margin-top: 100px;
 }
@@ -309,7 +322,6 @@ header nav li a {
 .skillsButton {
     color: #fff;
     font-weight: bold;
-    font-family: "Rubik", sans-serif;
     margin-top: 100px;
     padding: 15px;
     background-color: #76ABAE;
@@ -335,8 +347,6 @@ header nav li a {
 }
 
 .testimonialsHeader {
-    font: bold 2rem "Rubik", sans-serif; 
-    color: #222831;
     margin: 0 auto;
     width: 90%;  
 }
@@ -372,7 +382,6 @@ header nav li a {
 
 .testimonialLink {
     color: #222831;
-    font: bold 1rem "Rubik", sans-serif;
 
 }
 
@@ -474,10 +483,6 @@ header nav li a {
     background-image: url("../img/work.png");
 }
 
-.workH2,
-.workH3 {
-    color: #fff;
-}
 
 .workH3 {
     font-size: 2.2rem;
@@ -533,10 +538,6 @@ header nav li a {
     margin-bottom: 80px;
 }
 
-.instagramCarouselView,
-.blogCarouselView {
-    background-color: white;
-}
 
  .instagramItemList,
  .blogItemList {
@@ -678,7 +679,7 @@ header nav li a {
 /* Footer */
 
 footer {
-    background-color: #222831;
+    background-color: #000;
 }
 
 .mainFooter {
