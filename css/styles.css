@@ -395,24 +395,32 @@ header nav li a {
 /* Photo Styles */
 
 .photos {
-    max-height: 9600px;
-    max-width: 85rem;
-    margin: 20px auto 60px auto;
-    padding-right: 12px;
+    /* max-height: 9600px; */
+    /* max-width: 85rem; */
+    /* margin: 20px auto 60px auto; */
+    /* padding-right: 12px; */
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    flex-direction: row;
+    
     object-fit: contain;
 }
 
 .photos img {
-    width: 32.5%;
-    margin: 0 0 10px 10px;
+    width: 100%;
+    /* margin: 0 0 10px 10px; */
     transition: transform 0.5s;
     opacity: 0;
     animation: 1.2s fadein 1.2s forwards;
     -webkit-filter: brightness(100%);
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
+}
+
+.photosLeft,
+.photosMiddle,
+.photosRight {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
 }
 
 .photos img:hover {
