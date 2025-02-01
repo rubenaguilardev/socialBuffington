@@ -28,7 +28,7 @@ h2 {
 a:hover,
 .activePageBorder:hover,
 .photosActive:hover {
-    opacity: .70;
+    opacity: .65;
     cursor: pointer;
 }
 
@@ -50,6 +50,13 @@ a:hover,
     background-size: cover;
     background-position: right;
 }
+
+.workMain {
+    background-image: url("../img/Jazmin+-+SocialLite+HGI+SFOAK+(1).jpg");
+    background-size: cover;
+    background-position: right;
+}
+
 
 .darkNav > li > a {
     color: #000;
@@ -151,7 +158,8 @@ header nav li a {
 .intro {
     text-align: center;
     align-items: center;
-    flex: .4;   
+    flex: .4;  
+    padding-top: 100px; 
 }
 
 .intro h1 a {
@@ -213,7 +221,7 @@ header nav li a {
 /* Skills Styles */
 
 .skillsPicture {
-    background-image: url("../img/skills1.jpg");
+    background-image: url("../img/skills0.jpg");
     background-size: cover;  
     position: relative; 
     }
@@ -259,6 +267,7 @@ header nav li a {
     position: relative;  
     text-align: center; 
     z-index: 1;
+    
 }
 
 .skillsContainer::before {
@@ -276,38 +285,12 @@ header nav li a {
     position: relative;
 }
 
-.skillsLeftButton, 
-.skillsRightButton,
-.instagramPrevBtn,
-.instagramNextBtn,
-.blogPrevBtn,
-.blogNextBtn {
-    background-color: transparent;
-    color: #FFF;
-    font-size: 1.5rem;
-    border: 2px solid white;
-    border-radius: 2px;
-    padding: 5px 15px 10px 15px;
-    align-self: center; 
-}
-
 .skillsLeftButton {
-    margin-left: 10%;
+    margin-left: 5%;
 }
 
 .skillsRightButton {
-    margin-right: 10%;
-}
-
-.skillsLeftButton:hover,
-.skillsRightButton:hover,
-.skillsButton:hover,
-.instagramNextBtn:hover,
-.instagramPrevBtn:hover,
-.blogPrevBtn:hover,
-.blogNextBtn:hover {
-    opacity: .70;
-    cursor: pointer;
+    margin-right: 5%;
 }
 
 .pressed {
@@ -322,7 +305,7 @@ header nav li a {
 
 .skillsHeading {
     margin-bottom: 15px;
-    margin-top: 100px;
+    margin-top: 220px;
 }
 
 .skillsParagraph {
@@ -330,18 +313,24 @@ header nav li a {
 }
 
 .skillsButton {
-    color: #fff;
-    font-weight: bold;
-    margin-top: 100px;
-    padding: 15px;
-    background-color: #76ABAE;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.7);
     border: none;
+    padding: 12px 18px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
     border-radius: 2px;
+    cursor: pointer;
+    z-index: 10000;
+    transition: background 0.3s ease;
+    margin-top: 140px
+    
 }
 
 .fade {
     opacity: 0;
-    transition: opacity 1.5s ease-in-out;
+    transition: opacity 1s ease-in-out;
 }
 
 .show {
@@ -445,7 +434,8 @@ header nav li a {
     cursor: pointer;
   }
 
-#photosNextBtn {
+#photosNextBtn,
+.skillsLeftButton {
     position: absolute;
     top: 50%;
     right: 20px;
@@ -462,11 +452,14 @@ header nav li a {
     transition: background 0.3s ease;
 }
 
-#photosNextBtn:hover {
+#photosNextBtn:hover,
+.skillsRightButton:hover,
+.skillsButton:hover  {
     background: rgba(255, 255, 255, 0.9);
 }
 
-#photosPrevBtn {
+#photosPrevBtn,
+.skillsRightButton{
     position: absolute;
     top: 50%;
     left: 20px;
@@ -477,13 +470,14 @@ header nav li a {
     font-size: 24px;
     font-weight: bold;
     color: #333;
-    border-radius: 5px;
+    border-radius: 2px;
     cursor: pointer;
     z-index: 10000;
     transition: background 0.3s ease;
 }
 
-#photosPrevBtn:hover {
+#photosPrevBtn:hover,
+.skillsLeftButton:hover {
     background: rgba(255, 255, 255, 0.9);
 }
 
@@ -558,9 +552,6 @@ header nav li a {
     scroll-snap-type: x mandatory;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    padding: 20px 0 0 20px;
-    gap: 20px;
-    margin: 0 20px;
  }
  
 .instagram-media {
@@ -734,4 +725,8 @@ header nav li a {
     font-size: .9rem;
     align-self: flex-end;
     text-align: center;
+}
+
+.photoFooter {
+    border: none;
 }

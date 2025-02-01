@@ -41,11 +41,11 @@ function changeSkill(index) {
         const parentAnchor = changeSkillsButton.closest('a');
         switch (index) {
             case 1:
-                changeSkillsH2.innerText = "Photography";
-                changeSkillsP.innerText = "Capturing moments with artistic flair and emotional resonance";
-                changeSkillsButton.innerText = "View My Photographs";
+                changeSkillsH2.innerText = "Creative Storytelling";
+                changeSkillsP.innerText = "Crated to captivate and inspire";
+                changeSkillsButton.innerText = "View My Work";
                 if (parentAnchor) {
-                    parentAnchor.href = "photos.html";
+                    parentAnchor.href = "work.html";
                 }
                 break;
             case 2:
@@ -62,11 +62,11 @@ function changeSkill(index) {
                 changeSkillsButton.innerText = "View My Work";
                 break;
             default:
-                changeSkillsH2.innerText = "Creative Storytelling";
-                changeSkillsP.innerText = "Crafted to captivate and inspire";
-                changeSkillsButton.innerText = "View My Work";
+                changeSkillsH2.innerText = "Photography";
+                changeSkillsP.innerText = " Capturing moments with artistic flair and emotional resonance";
+                changeSkillsButton.innerText = "View My Photographs";
                 if (parentAnchor) {
-                    parentAnchor.href = "work.html";
+                    parentAnchor.href = "photos.html";
                 }
         }
 
