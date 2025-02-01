@@ -89,8 +89,8 @@ a:hover,
 }
 
 .logo {
-    width: 50%;
-    margin: 8px 0 18px 44px;
+    width: 55%;
+    margin: 10px 0 18px 44px;
 }
 
 .primaryHeader.sticking .logo {
@@ -149,8 +149,7 @@ header nav li a {
 }
 
 .intro {
-    display: flex;
-    justify-content: center;
+    text-align: center;
     align-items: center;
     flex: .4;   
 }
@@ -162,7 +161,7 @@ header nav li a {
 .heroContentArea,
 .workHeroContentArea {
     opacity: 0;
-    margin-top: 100px;
+    margin-top: 200px;
     animation: 1.2s slidefade 1.2s forwards;
 }
 
@@ -690,41 +689,49 @@ header nav li a {
 
 /* Footer */
 
-footer {
-    background-color: #000;
-}
-
-.mainFooter {
-    width: 90%;
-    max-width: 1500px;
-    margin: 0 auto;
-    height: 120px;
+.footerMain {
+    background-color: #fff;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    color: #FFF;
-    padding-top: 15px;
-    
+    border-top: gainsboro 1px solid;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 0 20px 0;
 }
 
+
+
 .footerLeft {
-    line-height: 1.5;
+    line-height: .7;
+    font-size: .9rem;
+    margin-bottom: -8px;
+    width: 33.33%;
+}
+
+.footerMain a {
+    color: #000;
 }
 
 
 .footerSpan {
     display: block;
     margin-bottom: 8px;
+    width: ;
+}
+
+.footerRight {
+    align-self: flex-end;
+    display: flex;
+    width: 33.33%;
+    justify-content: flex-end;
 }
 
 .footerIcon {
-    margin-right: 12px;
-    width: 30%;
+   width: 10%;
 }
 
 .footerCopyright {
-    color: #fff;
-    padding-bottom: 25px;
-    text-align: center;
     font-size: .9rem;
+    align-self: flex-end;
+    text-align: center;
 }
