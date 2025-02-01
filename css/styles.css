@@ -37,6 +37,11 @@ a:hover,
     border-radius: 2px;
 }
 
+.photosActive.dark {
+    border: 1px solid #000;
+    border-radius: 2px;
+}
+
 .main {
     display: flex;
     flex-direction: column;
@@ -140,9 +145,14 @@ header nav li a {
 }
 
 .intro {
-    border: 1px dashed black;
-    flex: .4;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: .4;   
+}
+
+.intro h1 a {
+    color: #fff;
 }
 
 .heroContentArea,
@@ -150,8 +160,6 @@ header nav li a {
     opacity: 0;
     margin-top: 100px;
     animation: 1.2s slidefade 1.2s forwards;
-    
-    color: #000;
 }
 
 @keyframes slidefade {
@@ -202,7 +210,7 @@ header nav li a {
 /* Skills Styles */
 
 .skillsPicture {
-    background-image: url("../img/skills0.jpg");
+    background-image: url("../img/skills1.jpg");
     background-size: cover;  
     position: relative; 
     }
