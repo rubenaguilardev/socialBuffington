@@ -14,13 +14,15 @@ nav {
 
 a {
     text-decoration: none;
-    opacity: 1;
-    
+    opacity: 1; 
 }
 
 h1 {
-    color: #000;
     font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.2rem;
 }
 
 a:hover,
@@ -31,18 +33,21 @@ a:hover,
 }
 
 .photosActive {
-    border: 1px solid #000;
+    border: 1px solid #fff;
     border-radius: 2px;
-}
-
-.logo {
-    margin-bottom: 20px;
 }
 
 .main {
     display: flex;
     flex-direction: column;
     height: 100vh;
+    background-image: url("../img/cover.png");
+    background-size: cover;
+    background-position: right;
+}
+
+.darkNav > li > a {
+    color: #000;
 }
 
 
@@ -51,33 +56,26 @@ a:hover,
 .primaryHeader {
     position: sticky;
     top: 0;
-    width: 90%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 20px 0 0 5%;
     animation: 1s fadein 0.5s forwards;
     opacity: 0;
     z-index: 10;
-    height: 60px;
+    height: 80px;
+    margin-top: 10px;
 }
 
 .primaryHeader.sticking {
-    background-color: #eee;
+    background-color: #fff;
     margin: 0;
-    padding: 0 5%;
     transition: all 0.3s ease;
     z-index: 10;
+    height: 50px;
+
 }
 
-.primaryHeader.sticking .logo {
-    width: 50%;
-    margin: 5px 0 5px 0;
-}
-
-.primaryHeader.sticking nav {
-    padding-top: 18px;
-}
 
 @keyframes fadein {
     100% {
@@ -87,6 +85,12 @@ a:hover,
 
 .logo {
     width: 60%;
+    margin: 30px 0 20px 44px;
+}
+
+.primaryHeader.sticking .logo {
+    width: 45%;
+    margin: 10px 0 10px 45px;
 }
 
 .logoLink:hover {
@@ -95,7 +99,7 @@ a:hover,
 
 header nav {
     display: flex;
-    margin: -20px -15px 0 0;
+    margin-right: 25px;
 }
 
 header nav li {
@@ -105,28 +109,23 @@ header nav li {
     
 }
 
+.primaryHeader.sticking nav li a {
+    color: black;
+}
+
+.primaryHeader.sticking .photosActive {
+    border: 1px solid #000;
+}
+
 header nav li a {
-    color: #000;
+    color: #fff;
 }
-
-.navLinked {
-    width: 40%;
-
-}
-
 
 /* Hero Styles */
 
 .hero,
 .workHero {
-    
-   
-    background-image: url("../img/cover.png");
-    background-size: cover;
-    background-position: right;
-
     flex: .6;
-    
 }
 
 .hero .backgroundImage,
