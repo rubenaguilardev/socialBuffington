@@ -420,7 +420,7 @@ header nav li a {
 .photosRight {
     display: flex;
     flex-direction: column;
-    width: 33.333%;
+    width: 234px;
 }
 
 .photos img:hover {
